@@ -11,13 +11,13 @@ var SongQueue = Songs.extend({
     }
   },
   playFirst: function (song) {
-  	console.log(this.models);
+  	// console.log(this.models);
   	if(this.models.length === 1){
   		song.play();
   	}
   },
   deQueue: function(){
-  	this.unshift();
+  	this.shift();
   	this.playInLine();
   }
 
