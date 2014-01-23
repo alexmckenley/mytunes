@@ -4,6 +4,7 @@ var SongQueue = Songs.extend({
   initialize: function(){
   	this.on('add', this.playFirst, this);
   },
+
   playInLine: function () {
   	if(this.models.length > 0){
       this.models[0].play();
@@ -16,7 +17,7 @@ var SongQueue = Songs.extend({
   	}
   },
   deQueue: function(){
-  	this.models.shift();
+  	this.unshift();
   	this.playInLine();
   }
 
