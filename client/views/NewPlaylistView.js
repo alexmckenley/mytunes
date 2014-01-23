@@ -13,6 +13,6 @@ var NewPlaylistView = Backbone.View.extend({
   },
   addPlaylist: function(e){
     e.preventDefault();
-    // this.model.set('', new SongQueue())
+    this.trigger('addPlaylist', this.$('#playlistName').val() );
   }
 });
